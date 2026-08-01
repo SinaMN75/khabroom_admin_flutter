@@ -9,7 +9,6 @@
 #include <connectivity_plus/connectivity_plus_windows_plugin.h>
 #include <file_selector_windows/file_selector_windows.h>
 #include <geolocator_windows/geolocator_windows.h>
-#include <no_screenshot/no_screenshot_plugin_c_api.h>
 #include <share_plus/share_plus_windows_plugin_c_api.h>
 #include <syncfusion_pdfviewer_windows/syncfusion_pdfviewer_windows_plugin.h>
 #include <url_launcher_windows/url_launcher_windows.h>
@@ -22,8 +21,6 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("FileSelectorWindows"));
   GeolocatorWindowsRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("GeolocatorWindows"));
-  NoScreenshotPluginCApiRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("NoScreenshotPluginCApi"));
   SharePlusWindowsPluginCApiRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("SharePlusWindowsPluginCApi"));
   SyncfusionPdfviewerWindowsPluginRegisterWithRegistrar(

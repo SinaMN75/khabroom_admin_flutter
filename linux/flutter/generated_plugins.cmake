@@ -4,7 +4,6 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   file_selector_linux
-  no_screenshot
   syncfusion_pdfviewer_linux
   url_launcher_linux
   webview_all_linux
