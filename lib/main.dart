@@ -3,7 +3,7 @@ import "package:u/utilities.dart";
 void main() => runUAdminApp(
   UAdminConfig(
     appName: "SinaMN75",
-    baseUrl: "https://api.sinamn75.com/api",
+    baseUrl: "https://api.khabroom.com/api",
     apiKey: "123",
     primaryColor: const Color.fromRGBO(50, 48, 221, 1),
     logo: "lib/assets/images/logo.png",
