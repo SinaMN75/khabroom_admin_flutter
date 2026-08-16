@@ -34,10 +34,10 @@ void main() => runUAdminApp(
         roles: <TagUser>[TagUser.permissionManageDorms],
         modules: <UAdminModule>[
           UAdminModules.dorms(),
-          UAdminModules.dormRooms(),
-          UAdminModules.dormBeds(),
-          UAdminModules.contracts(),
-          UAdminModules.invoices(),
+          UAdminModules.dormRooms(roles: <TagUser>[TagUser.systemAdmin, TagUser.superAdmin]),
+          UAdminModules.dormBeds(roles: <TagUser>[TagUser.systemAdmin, TagUser.superAdmin]),
+          UAdminModules.contracts(roles: <TagUser>[TagUser.systemAdmin, TagUser.superAdmin]),
+          UAdminModules.invoices(roles: <TagUser>[TagUser.systemAdmin, TagUser.superAdmin]),
         ],
       ),
       UAdminGroup(
@@ -50,6 +50,7 @@ void main() => runUAdminApp(
       UAdminGroup(
         title: U.s.content,
         icon: Icons.content_copy_outlined,
+        roles: <TagUser>[TagUser.systemAdmin, TagUser.superAdmin],
         modules: <UAdminModule>[
           UAdminModules.blogs(),
           UAdminModules.contents(),
@@ -63,7 +64,7 @@ void main() => runUAdminApp(
           UAdminModules.appSettings(roles: <TagUser>[TagUser.systemAdmin]),
           UAdminModules.fileManager(roles: <TagUser>[TagUser.systemAdmin]),
           UAdminModules.settings(),
-          UAdminModules.apiLogs(),
+          UAdminModules.apiLogs(roles: <TagUser>[TagUser.systemAdmin]),
         ],
       ),
     ],
