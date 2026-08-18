@@ -2,10 +2,10 @@ import "package:u/utilities.dart";
 
 void main() => runUAdminApp(
   UAdminConfig(
-    appName: "SinaMN75",
+    appName: "KhabRoom",
     baseUrl: "https://api.khabroom.com/api",
     apiKey: "123",
-    primaryColor: const Color.fromRGBO(50, 48, 221, 1),
+    primaryColor: Colors.red.shade800,
     logo: "lib/assets/images/logo.png",
     loginBackground: "lib/assets/images/login_background.jpg",
     dashboard: () => UAdminModules.propertyDashboard(),
@@ -46,6 +46,12 @@ void main() => runUAdminApp(
         icon: Icons.people_outline_rounded,
         roles: <TagUser>[TagUser.permissionManageUsers],
         modules: <UAdminModule>[UAdminModules.users()],
+      ),
+      UAdminGroup(
+        header: U.s.payment.toUpperCase(),
+        title: U.s.payment,
+        icon: Icons.account_balance_outlined,
+        modules: <UAdminModule>[UAdminModules.wallet(), UAdminModules.transactions(), UAdminModules.accounting()],
       ),
       UAdminGroup(
         title: U.s.content,
